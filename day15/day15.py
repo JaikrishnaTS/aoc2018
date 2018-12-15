@@ -176,7 +176,7 @@ def check(elf_ap, partb=False):
                              key=lambda u: (u.hp, u.pos))
                 attack.hp -= unit.ap
                 if attack.hp <= 0:
-                    attack.alive = False  # check HP
+                    attack.alive = False
                     cnt[attack.type] -= 1
                     units.pop(attack.pos)
                     if partb and attack.type == 0:
@@ -193,7 +193,7 @@ def check(elf_ap, partb=False):
                                  key=lambda u: (u.hp, *u.pos))
                     attack.hp -= unit.ap
                     if attack.hp <= 0:
-                        attack.alive = False  # check HP
+                        attack.alive = False
                         cnt[attack.type] -= 1
                         units.pop(attack.pos)
                         if partb and attack.type == 0:
